@@ -17,9 +17,9 @@ namespace BCP.ExchangeRate.BusinessLogic.Implementation
 
         public async Task<ExchangeForResponseDto> CalculateExchange(ExchangeForProcessingDto exchangeForProcessingDto)
         {
-            var source = await _currencyRepository.GetCurrencyByCodeAsync(exchangeForProcessingDto.SourceCurrency);
+            var source = await _currencyRepository.GetCurrencyByCodeAsync(exchangeForProcessingDto.SourceCurrency.ToUpper());
             
-            var destination = await _currencyRepository.GetCurrencyByCodeAsync(exchangeForProcessingDto.DestinationCurrency);
+            var destination = await _currencyRepository.GetCurrencyByCodeAsync(exchangeForProcessingDto.DestinationCurrency.ToUpper());
             
             if (source == null || destination == null) return null;
 
