@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "12ecd413-c373-4f22-9f18-f7a6b6d83384",
+		"name": "BCP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Currencies - /api/v1.0/currencies",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzODgyMjcsImV4cCI6MTYyOTQ3NDYyNywiaWF0IjoxNjI5Mzg4MjI3fQ.vEXGmEHgRIX0ayR-GXUL8snquADnNB9_-wHIyMorI4w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/currencies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"currencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/currencies/5c6624e8-1605-436f-8500-babf5f5cebc4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"currencies",
+								"5c6624e8-1605-436f-8500-babf5f5cebc4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Code\": \"BRN\",\r\n    \"Name\": \"BRUNO CURRENCY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/currencies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"currencies"
+							],
+							"query": [
+								{
+									"key": "Code",
+									"value": "BRN",
+									"disabled": true
+								},
+								{
+									"key": "Name",
+									"value": "BRUNO CURRENCY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"code\": \"BRN\",\r\n        \"name\": \"BRUNO CURRENCy DE CASA\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/currencies/12f8f728-0b21-4009-be7c-370a2b9ecd9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"currencies",
+								"12f8f728-0b21-4009-be7c-370a2b9ecd9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/currencies/12f8f728-0b21-4009-be7c-370a2b9ecd9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"currencies",
+								"12f8f728-0b21-4009-be7c-370a2b9ecd9b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rates- /api/v1.0/rates",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/rates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"rates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/rates/e38e6fa4-6029-4fc9-93de-fccb279cfb93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"rates",
+								"e38e6fa4-6029-4fc9-93de-fccb279cfb93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"averageRate\": 0.32,\r\n    \"date\": \"2021-08-06T17:16:40\",\r\n    \"endOfDay\": \"2021-09-25T17:16:40\",\r\n    \"currencyId\": \"e38e6fa4-6029-4fc9-93de-fccb279cfb73\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/rates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"rates"
+							],
+							"query": [
+								{
+									"key": "Code",
+									"value": "BRN",
+									"disabled": true
+								},
+								{
+									"key": "Name",
+									"value": "BRUNO CURRENCY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"averageRate\": 0.87,\r\n    \"date\": \"2021-08-06T17:16:40\",\r\n    \"endOfDay\": \"2021-09-25T17:16:40\",\r\n    \"currencyId\": \"e38e6fa4-6029-4fc9-93de-fccb279cfb73\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/rates/11719416-0e08-43da-aa62-18ece6da72c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"rates",
+								"11719416-0e08-43da-aa62-18ece6da72c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzNDUwNjksImV4cCI6MTYyOTQzMTQ2OSwiaWF0IjoxNjI5MzQ1MDY5fQ.XWLSrzkwWI9KJ4jPbMYrAVSBzgiL3PtzP88oeHEXEQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/rates/e38e6fa4-6029-4fc9-93de-fccb279cfb93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"rates",
+								"e38e6fa4-6029-4fc9-93de-fccb279cfb93"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth - /api/v1.0/auth/login",
+			"item": [
+				{
+					"name": "Get jwt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exchange - /api/v1.0/exchange",
+			"item": [
+				{
+					"name": "Exchange Amount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhNzliMmU2NC1heGNlLTRmM2EtOGNmNi1hNjhiYTQwMGRiMTIiLCJlbWFpbCI6ImJydW5vLmVjcUBnbWFpbC5jb20iLCJuYmYiOjE2MjkzODgyMjcsImV4cCI6MTYyOTQ3NDYyNywiaWF0IjoxNjI5Mzg4MjI3fQ.vEXGmEHgRIX0ayR-GXUL8snquADnNB9_-wHIyMorI4w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 120,\r\n    \"sourceCurrency\": \"GBP\",\r\n    \"destinationCurrency\": \"PEN\",\r\n    \"isPreferencial\" : 0,\r\n    \"rateDiscount\" : 0.1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1.0/exchange",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1.0",
+								"exchange"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
