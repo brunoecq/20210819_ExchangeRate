@@ -25,6 +25,10 @@ namespace BCP.ExchangeRate.BusinessLogic.Implementation
 
             var exchangeRate = source.Rate.AverageRate / destination.Rate.AverageRate;
 
+            if (exchangeForProcessingDto.IsPreferencial == 1) {
+                exchangeRate = exchangeRate * (1 - exchangeForProcessingDto.RateDiscount); 
+            }
+
             return new ExchangeForResponseDto() { 
                 Amount = exchangeForProcessingDto.Amount,
                 AmountExchanged = exchangeForProcessingDto.Amount * exchangeRate,

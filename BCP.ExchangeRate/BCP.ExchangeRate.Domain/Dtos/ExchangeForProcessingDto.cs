@@ -11,5 +11,7 @@ namespace BCP.ExchangeRate.Domain.Dtos
         public string SourceCurrency { get; set; }
         [Required]
         public string DestinationCurrency { get; set; }
+        public int IsPreferencial { get; set; }
+        public decimal RateDiscount { get; set; }
     }
 }
